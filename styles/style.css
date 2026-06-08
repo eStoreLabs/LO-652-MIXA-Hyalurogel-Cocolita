@@ -223,6 +223,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   padding: 0 16px;
+  padding-top: 30px;
   gap: 32px;
 }
 #es-rc #es-rc-content .es-features__icon {
@@ -598,7 +599,7 @@ body {
     padding-left: 35px;
   }
   #es-rc #es-rc-content .es-features__title {
-    margin-bottom: 64px;
+    margin-bottom: 69px;
   }
   #es-rc #es-rc-content .es-features__container {
     flex-flow: row;
