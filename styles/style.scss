@@ -26,7 +26,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
-  max-width: 998px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0;
   overflow: hidden;
@@ -46,9 +46,13 @@ body {
   }
 
   .es-kv {
-
     &__img {
       @include img;
+
+      &--photo {
+        object-fit: cover;
+        width: 100%;
+      }
 
       &--plus {
         position: absolute;
@@ -130,7 +134,6 @@ body {
       color: #0084d3;
       text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
       font-weight: 700;
-      margin-bottom: 4px;
     }
 
     &__text {
@@ -143,7 +146,6 @@ body {
     }
 
     &__texts {
-
       :nth-child(2),
       :nth-child(3) {
         &::before {
@@ -273,6 +275,8 @@ body {
 
     &__img {
       @include img;
+      object-fit: cover;
+      width: 100%;
     }
 
     &__title {
@@ -288,7 +292,7 @@ body {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 32px 8px;
+      gap: 32px;
     }
 
     &__single {
@@ -536,6 +540,7 @@ body {
     .es-kv {
       &__content {
         justify-content: space-between;
+        flex: 1;
       }
 
       &__bottom {
@@ -550,7 +555,6 @@ body {
 
         &--dt {
           display: block;
-          max-width: 180px;
         }
       }
 
@@ -559,7 +563,7 @@ body {
       }
 
       &__photo {
-        flex: 1;
+        max-width: 50%;
       }
 
       &__img {
@@ -571,29 +575,31 @@ body {
 
         &--plus {
           scale: 1;
-          left: -187px;
+          left: -65%;
           top: 63%;
         }
       }
 
       &__packshot {
-        margin-right: -115px;
-        margin-left: 95px;
         margin-top: 8px;
+        padding-right: 5%;
       }
 
       &__wrapper {
+        position: relative;
         display: flex;
-        padding-right: 32px;
+        padding: 0;
         padding-bottom: 25px;
+        margin-right: 8%;
+        padding-left: 9%;
+        margin-left: auto;
       }
 
       &__texts {
-        position: relative;
+        position: absolute;
+        right: 0;
         z-index: 1;
-        margin-left: -40px;
-        margin-right: 28px;
-        margin-top: -18px;
+        margin-top: -5%;
       }
     }
 
@@ -749,6 +755,9 @@ body {
     .es-cross {
       padding: 0 40px;
       margin-bottom: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
       &__title {
         margin-block: 64px;
@@ -780,7 +789,6 @@ body {
           padding-left: 165px;
           padding-top: 55px;
         }
-
       }
 
       &__packshot {
@@ -791,8 +799,7 @@ body {
       &__product {
         &--1 {
           max-width: 800px;
-          margin: 0 auto;
-          margin-left: 100px;
+          margin-right: 100px;
           padding-top: 15px;
         }
 
@@ -847,8 +854,84 @@ body {
   }
 
   @media screen and (min-width: 998px) {
+    .es-kv {
+      &__title {
+        font-size: 30px;
+      }
+
+      &__number {
+        font-size: 76px;
+      }
+
+      &__text {
+        font-size: 23px;
+      }
+
+      &__name {
+        font-size: 40px;
+      }
+
+      &__disc {
+        font-size: 25px;
+      }
+
+      &__packshot {
+        max-width: unset;
+      }
+    }
+
+    .es-benefits {
+      &__text {
+        font-size: 18px;
+      }
+    }
+
+    .es-features {
+      &__title {
+        font-size: 40px;
+      }
+
+      &__point,
+      &__text {
+        font-size: 20px;
+      }
+    }
+
+    .es-formula {
+      &__title {
+        font-size: 40px;
+      }
+
+      &__text {
+        font-size: 18px;
+      }
+    }
+
+    .es-routine {
+      &__text,
+      &__descr {
+        font-size: 18px;
+      }
+    }
+
     .es-cross {
+      &__title {
+        font-size: 40px;
+      }
+
+      &__step {
+        font-size: 30px;
+      }
+
+      &__text {
+        font-size: 16px;
+      }
+
       &__product {
+        &--1 {
+          margin-right: 0;
+        }
+
         &--2 {
           padding-top: 50px;
           margin-left: 155px;
